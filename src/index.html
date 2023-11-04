@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results Summary Component</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="font-hankenGrotesk">
+    <div
+      class="w-sreen md:flex md:max-w-fit md:mt-24 md:shadow-md md:mx-auto md:rounded-3xl"
+    >
+      <!-- Results Card -->
+      <div
+        class="bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue rounded-br-3xl rounded-bl-3xl p-7 flex flex-col items-center md:w-80 md:rounded-t-3xl"
+      >
+        <h1 class="text-lg font-medium text-lightLavender">Your Result</h1>
+        <div
+          class="my-5 h-40 w-40 bg-gradient-to-b from-violetBlue to-persianBlue rounded-full flex flex-col items-center justify-center"
+        >
+          <div>
+            <span class="text-6xl text-white font-extrabold">76</span>
+          </div>
+          <span class="text-center text-lightLavender opacity-70 font-medium">
+            of 100
+          </span>
+        </div>
+        <h6 class="font-bold text-white text-2xl">Great</h6>
+        <p class="text-center text-lg font-medium text-lightLavender mt-3">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <!-- Summary -->
+      <div class="p-7 md:w-80">
+        <h2 class="text-darkGrayBlue font-bold text-lg">Summary</h2>
+        <!-- Cards Container -->
+        <div class="flex flex-col gap-3 mt-4" data-summary-container></div>
+        <button
+          class="bg-darkGrayBlue block w-full text-white h-14 rounded-3xl mt-4 text-lg hover:bg-violetBlue active:outline-dashed active:outline-violetBlue"
+        >
+          Continue
+        </button>
+      </div>
+    </div>
+
+    <template data-summary-card-template>
+      <div
+        class="px-5 py-4 bg-lightRed-400 flex justify-between items-center rounded-xl"
+        data-card-container
+      >
+        <div class="flex items-center gap-2">
+          <img src="" alt="" data-summary-card-icon />
+          <span class="font-medium" data-summary-card-name></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span
+            class="text-darkGrayBlue font-bold"
+            data-summary-card-score
+          ></span>
+          <span class="text-lightDarkGrayBlue">/ 100</span>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>
